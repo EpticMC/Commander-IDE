@@ -1,2 +1,5 @@
+@import url("../lib/Raleway-Regular.ttf");
 
+*    { font-family: 'Raleway', sans-serif; }
 body { background-color: #1E1E1E; }
+h1   { color: #FFF; }
