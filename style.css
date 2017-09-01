@@ -1,0 +1,33 @@
+
+*{
+    padding:             0px;
+    margin:              0px;
+    overflow:            visible;
+}
+
+button{
+    padding:             5px;
+    border-radius:       5px;
+}
+
+body { background-color: #1E1E1E; }
+th   { padding:          5px;     }
+
+#container {
+    height:              87vh;
+    width:               95vw;
+}
+
+.monaco-editor {
+    margin-left:         10px;
+    height:              100%;
+    width:               100%;
+}
+
+.title { 
+    font-size:           18px;
+    color:               #FFF;
+}
+
+#open  { display:        inline-block; }
+#save  { display:        inline-block; }
