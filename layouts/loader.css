@@ -1,12 +1,20 @@
 @import url("../lib/Raleway-Regular.ttf");
+@import url("../lib/RobotoMono-Regular.ttf");
 
 *    { font-family:      'Raleway', sans-serif; }
 body { background-color: #1E1E1E; }
 h2   { display:          inline; }
+img  { margin-left:      -1.2em; }
 
 .l_wrap { display:       flex; }
 
-.l_ico { color:          #42D1F4 }
+.l_ico { 
+    color:               #42D1F4;
+    font-family:         'Roboto Mono', monospace;
+    min-width:           1em;
+    text-align:          center;
+}
+
 .l_txt { 
     color:               #FFF;
     padding-left:        1em; 
@@ -15,7 +23,7 @@ h2   { display:          inline; }
 .c_align {
     position:            absolute;
     margin:              auto;
-    top:                 0;
+    top:                 -25%;
     right:               0;
     bottom:              0;
     left:                0;
