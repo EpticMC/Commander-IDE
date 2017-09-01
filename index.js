@@ -4,12 +4,17 @@ const { shell }              = require("electron")
 const os                     = require('os');
 const ipc                    = require('electron').ipcMain;
 
-require('electron-context-menu')({
-    prepend: (params, browserWindow) => [{
-        label: 'Rainbow',
-        visible: params.mediaType === 'image'
-    }]
-});
+const debug = true;
+
+if (debug){
+    //Inspect Elements context menu
+    require('electron-context-menu')({
+        prepend: (params, browserWindow) => [{
+            label: 'Rainbow',
+            visible: params.mediaType === 'image'
+        }]
+    });
+}
 
 function getLogoPath(){
     if (os.platform() === 'darwin')     return '/icon/icon.icns';
