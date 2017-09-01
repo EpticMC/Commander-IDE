@@ -23,7 +23,7 @@ function getLogoPath(){
 }
 
 function createWindowConfig(){
-    var conf = { width: 1000, heigth: 600, icon: __dirname + getLogoPath(), show: false };
+    var conf = { resizable: false, width: 1000, heigth: 600, icon: __dirname + getLogoPath(), show: false };
     return conf;
 }
 
@@ -31,13 +31,9 @@ ipc.on('UI-windowID', function (event) { event.returnValue = win.id; });
 
 app.on('ready', () => {
     console.log('STARTED');
-    win = new BrowserWindow({ resizable: false, width: 1000, heigth: 600, icon: __dirname + getLogoPath(), show: false });
+    win = new BrowserWindow(createWindowConfig());
     win.setMenu(null); 
-    win.webContents.on("will-navigate", (e, url) => {
-        e.preventDefault();
-        win.webContents.send("navigate", url);
-    });
-    win.loadURL(`file://${__dirname}/index.html`);
+    win.loadURL(`file://${__dirname}/layouts/loader.html`);
     win.on('ready-to-show', () => { win.show(); });
     win.on('closed',        () => { app.quit(); });
 });
