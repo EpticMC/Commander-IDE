@@ -2,7 +2,15 @@
 
 *    { font-family:      'Raleway', sans-serif; }
 body { background-color: #1E1E1E; }
-h1   { color:            #FFF; }
+h2   { display:          inline; }
+
+.l_wrap { display:       flex; }
+
+.l_ico { color:          #42D1F4 }
+.l_txt { 
+    color:               #FFF;
+    padding-left:        1em; 
+}
 
 .c_align {
     position:            absolute;
