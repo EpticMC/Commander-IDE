@@ -1,5 +1,17 @@
 @import url("../lib/Raleway-Regular.ttf");
 
-*    { font-family: 'Raleway', sans-serif; }
+*    { font-family:      'Raleway', sans-serif; }
 body { background-color: #1E1E1E; }
-h1   { color: #FFF; }
+h1   { color:            #FFF; }
+
+.c_align {
+    position:            absolute;
+    margin:              auto;
+    top:                 0;
+    right:               0;
+    bottom:              0;
+    left:                0;
+    width:               100px;
+    height:              100px;
+    border-radius:       3px;
+}
