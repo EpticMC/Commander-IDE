@@ -1,0 +1,25 @@
+{
+    "name": "Commander",
+    "description": "Commandblock IDE",
+    "version": "0.1.0",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron ."
+    },
+    "dependencies": {
+        "electron": "^1.4.15",
+        "monaco-loader": "^0.8.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/EpticMC/Commander-IDE"
+    },
+    "maintainers": [{
+        "name": "NullDev",
+        "email": "admin@nulldev.org",
+        "web": "nulldev.org"
+    }],
+    "license": "Apache-2.0",
+    "author": "NullDev",
+    "homepage": "https://nulldev.org"
+}
