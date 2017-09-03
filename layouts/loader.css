@@ -1,5 +1,5 @@
-@import url("../lib/Raleway-Regular.ttf");
-@import url("../lib/RobotoMono-Regular.ttf");
+@import url("../lib/fonts/Raleway-Regular.ttf");
+@import url("../lib/fonts/RobotoMono-Regular.ttf");
 
 *    { font-family:      'Raleway', sans-serif; }
 body { background-color: #1E1E1E; }
