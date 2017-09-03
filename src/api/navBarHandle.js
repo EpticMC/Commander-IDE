@@ -15,4 +15,11 @@ $(document).ready(function() {
 		$(".selected").removeClass("selected");
 		$(".visible").removeClass("visible");
 	});
+
+	$("#e__copy").click(function() { document.execCommand('copy'); });
+	$("#e__copy_all").click(function() {
+		$(".monaco-editor").select();
+		document.execCommand('copy'); 
+	});
+	$("#e__select_all").click(function() { $(".monaco-editor").select(); });
 });
