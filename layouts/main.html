@@ -4,24 +4,68 @@
 		<meta charset="UTF-8">
 		<title>Commander IDE</title>
         <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="../lib/fa/fa.min.css">
 	</head>
 	<body>
-        <div id="nav-bar">
-
-            <table>
-                <tr>
-                    <th class="functions">
-                        <button id="open">
-                            Open
-                        </button>
-                        <button id="save">
-                            Save
-                        </button>
-                    </th>
-                </tr>
-            </table>
-
-
+        <div class="nav-bar">
+        <!-- &#x2318; noChoice -->
+            <ul class="left">
+                <li>
+                    File
+                    <div class="submenu">
+                        <ul>
+                            <li id="f__new" class="shortcut" shortcut="CTRL + N">
+                                New
+                            </li>
+                            <li id="f__open" class="shortcut" shortcut="CTRL + O">
+                                Open
+                            </li>
+                            <li id="f__save" class="hasSubMenu">
+                                Recently opened
+                            </li>
+                            <li id="f__save" class="shortcut" shortcut="CTRL + S">
+                                Save
+                            </li>
+                            <li id="f__save_as" class="shortcut" shortcut="">
+                                Save as ...
+                            </li>
+                            <li class="spacer"></li>
+                            <li id="f__save_and_quit" class="shortcut" shortcut="">
+                                Save and quit
+                            </li>
+                            <li id="f__quit" class="shortcut" shortcut="">
+                                Quit
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    Edit
+                    <div class="submenu">
+                        <ul>
+                            <li id="e__undo" class="shortcut" shortcut="CTRL + Z">
+                                Undo
+                            </li>
+                            <li id="e__redo" class="shortcut" shortcut="CTRL + Y">
+                                Redo
+                            </li>
+                            <li class="spacer"></li>
+                            <li id="e__cut" class="shortcut" shortcut="CTRL + X">
+                                Cut
+                            </li>
+                            <li id="e__copy" class="shortcut" shortcut="CTRL + C">
+                                Copy
+                            </li>
+                            <li id="e__paste" class="shortcut" shortcut="CTRL + V">
+                                Paste
+                            </li>
+                            <li id="e__select_all" class="shortcut" shortcut="CTRL + A">
+                                Select All
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
         </div>
 		<div id="container"></div>
         <script>
