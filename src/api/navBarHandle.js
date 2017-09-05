@@ -25,18 +25,77 @@ $(document).ready(function() {
 
 
 	//File
+	$("#f__new").click(function() {
+
+	});
+	$("#f__open").click(function() {
+
+	});
+	$("#f__recent").click(function() {
+
+	});
+	$("#f__save").click(function() {
+
+	});
+	$("#f__save_as").click(function() {
+
+	});
+	$("#f__save_and_quit").click(function() {
+
+	});
+	$("#f__quit").click(function() {
+
+	});
 
 	//Edit
-	$("#e__copy").click(function() { document.execCommand('copy'); });
-	$("#e__copy_all").click(function() {
-		$(".monaco-editor").select();
-		document.execCommand('copy'); 
-	});
-	$("#e__select_all").click(function() { $(".monaco-editor").select(); });
+	$("#e__undo").click(function() { 
 
+	});
+	$("#e__redo").click(function() { 
+
+	});
+	$("#e__cut").click(function() { 
+
+	});
+	$("#e__copy").click(function() { 
+
+	});
+	$("#e__copy_all").click(function() {
+
+	});
+	$("#e__paste").click(function() { 
+
+	});
+	$("#e__paste_and_replace").click(function() { 
+
+	});
+	$("#e__select_all").click(function() { 
+
+	});
 
 	//View
-	$("#v__dev").click(function()     { remote.getCurrentWindow().toggleDevTools(); });
+	$("#v__max").click(function() { 
+
+	});
+	$("#v__min").click(function() { 
+
+	});
+	$("#v__normal").click(function() { 
+
+	});
+	$("#v__reload").click(function() { 
+
+	});
+	$("#v__dev").click(function() { remote.getCurrentWindow().toggleDevTools(); });
+	$("#v__zoom_in").click(function() { 
+
+	});
+	$("#v__zoom_out").click(function() { 
+
+	});
+	$("#v__fullscreen").click(function() { 
+
+	});
 
 	//Help
 	$("#h__about").click(function(){ 
