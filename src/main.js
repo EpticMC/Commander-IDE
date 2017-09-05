@@ -1,10 +1,9 @@
 const { ipcRenderer, remote } = require("electron");
-const loader = require("monaco-loader");
 const fs = require("fs");
 const FileManager = require("./api/fileManager");
 
 window.onload = () => {
-    loader().then((monaco) => {
+    /*loader().then((monaco) => {
         let editor = monaco.editor.create(document.getElementById("container"), {
             language: "javascript",
             theme: "vs-dark",
@@ -21,5 +20,5 @@ window.onload = () => {
 
         $("#f__open").click(function() { fileManager.openFile() });
         $("#f__save").click(function() { fileManager.saveFile() });
-    });
+    });*/
 }
