@@ -1,7 +1,7 @@
 {
     "name": "Commander",
     "description": "Commandblock IDE",
-    "version": "3.1.2",
+    "version": "3.2.2",
     "main": "index.js",
     "scripts": {
         "start": "electron ."
@@ -10,7 +10,7 @@
         "electron": "^1.4.15",
         "monaco-loader": "^0.8.0",
         "jquery": "^3.2.1",
-        "app-module-path": "2.2.0"
+        "app-module-path": "^2.2.0"
     },
     "devDependencies": {
         "electron-context-menu": "^0.9.1"
