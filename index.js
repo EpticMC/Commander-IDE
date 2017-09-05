@@ -29,8 +29,21 @@ function createWindowConfig(){
 
 ipc.on("UI-windowID", function (event) { event.returnValue = win.id; });
 
+app.setName("Commander IDE");
+
 app.on("ready", () => {
-    console.log("STARTED");
+    console.log(
+        "    ██╗ ██████╗  ███████╗\n" +
+        "    ██║ ██╔══██╗ ██╔════╝\n" +
+        "    ██║ ██║  ██║ █████╗  \n" +
+        "    ██║ ██║  ██║ ██╔══╝  \n" +
+        "    ██║ ██████╔╝ ███████╗\n" +
+        "    ╚═╝ ╚═════╝  ╚══════╝\n" +
+        "    ╔═╗╔╦╗╔═╗╦═╗╔╦╗╔═╗╔╦╗\n" +
+        "    ╚═╗ ║ ╠═╣╠╦╝ ║ ║╣  ║║\n" +
+        "    ╚═╝ ╩ ╩ ╩╩╚═ ╩ ╚═╝═╩╝\n"
+    );
+
     win = new BrowserWindow(createWindowConfig());
     win.setMenu(null); 
     win.loadURL(`file://${__dirname}/layouts/loader.html`);
