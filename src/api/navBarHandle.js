@@ -3,6 +3,7 @@ const { app, BrowserWindow } = require("electron");
 window.$ = window.jQuery = require("jquery");
 const remote = require("electron").remote;
 const shell = require('electron').shell;
+const {webFrame} = require('electron')
 
 //Links
 var _bug = "https://github.com/EpticMC/Commander-IDE/issues";
@@ -11,6 +12,7 @@ var _git = "https://github.com/EpticMC/Commander-IDE";
 var _ept = "https://epticmc.com";
 
 $(document).ready(function() {
+	var win = remote.getCurrentWindow();
 	$(".nav-bar ul li").click(function(e) {
 		e.stopPropagation();
 		$(".visible").removeClass("visible");
@@ -74,27 +76,25 @@ $(document).ready(function() {
 	});
 
 	//View
-	$("#v__max").click(function() { 
-
-	});
-	$("#v__min").click(function() { 
-
-	});
+	$("#v__max").click(function() { remote.BrowserWindow.getFocusedWindow().maximize();	});
+	$("#v__min").click(function() { remote.BrowserWindow.getFocusedWindow().minimize(); });
 	$("#v__normal").click(function() { 
-
+		if (win.isFullScreen()) win.setFullScreen(false);
+		if (win.isMaximized()) win.unmaximize();
+    	win.setSize(1000, 600, true);
 	});
-	$("#v__reload").click(function() { 
-
-	});
+	$("#v__reload").click(function() { win.reload(); });
 	$("#v__dev").click(function() { remote.getCurrentWindow().toggleDevTools(); });
 	$("#v__zoom_in").click(function() { 
-
+		var _this = webFrame.getZoomFactor();
+		/*if (_this >= 3)*/ webFrame.setZoomFactor(_this + .1);
 	});
 	$("#v__zoom_out").click(function() { 
 
 	});
 	$("#v__fullscreen").click(function() { 
-
+		if (win.isFullScreen()) win.setFullScreen(false);
+		else win.setFullScreen(true);
 	});
 
 	//Help
