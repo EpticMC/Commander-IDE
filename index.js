@@ -23,7 +23,13 @@ function getLogoPath(){
 }
 
 function createWindowConfig(){
-    var conf = { resizable: false, width: 1000, heigth: 600, icon: __dirname + getLogoPath(), show: false };
+    var conf = { 
+        resizable: false, 
+        width: 1000, 
+        heigth: 600, 
+        icon: __dirname + getLogoPath(), 
+        show: false 
+    };
     return conf;
 }
 
