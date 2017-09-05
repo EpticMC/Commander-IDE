@@ -1,6 +1,6 @@
-const { app, BrowserWindow } = require("electron")
-const path                   = require("path")
-const { shell }              = require("electron")
+const { app, BrowserWindow } = require("electron");
+const path                   = require("path");
+const { shell }              = require("electron");
 const os                     = require("os");
 const ipc                    = require("electron").ipcMain;
 
