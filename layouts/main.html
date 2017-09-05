@@ -73,10 +73,11 @@
                 </li>
             </ul>
         </div>
-		<div id="container"></div>
         <script>
             require('../src/main.js');
             require('../src/api/navBarHandle.js');
+            const commanderIDE = require('../src/commanderIDE.js').default;
+            document.querySelector('body').appendChild(new commanderIDE());
         </script>
 	</body>
 </html>
