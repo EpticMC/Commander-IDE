@@ -4,7 +4,7 @@ const { shell }              = require("electron");
 const os                     = require("os");
 const ipc                    = require("electron").ipcMain;
 
-const debug = true;
+const debug = false;
 
 if (debug){
     //Inspect Elements context menu
@@ -55,4 +55,5 @@ app.on("ready", () => {
     win.loadURL(`file://${__dirname}/layouts/loader.html`);
     win.on("ready-to-show", () => { win.show(); });
     win.on("closed",        () => { app.quit(); });
+    win.center();
 });
