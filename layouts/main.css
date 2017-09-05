@@ -242,7 +242,9 @@ commander-files a {
     background:            linear-gradient(#fddd3b, #f19104);
 }
 
-.zoomer::-webkit-slider-thumb{
+.zoomer::-webkit-slider-thumb, 
+.zoomer::-ms-thumb, 
+.zoomer::-moz-range-thumb {
     appearance:            none !important;
     height:                34px;
     width:                 34px; 
