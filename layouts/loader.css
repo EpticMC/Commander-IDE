@@ -4,9 +4,12 @@
 *    { font-family:      'Raleway', sans-serif; }
 body { background-color: #1E1E1E; }
 h2   { display:          inline; }
-img  { margin-left:      -1.2em; }
+img  { margin-left:      -3.5em; }
 
-.l_wrap { display:       flex; }
+.l_wrap { 
+    display:             flex;
+    margin-left:         -1.5em;
+}
 
 .l_ico { 
     color:               #42D1F4;
