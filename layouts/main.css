@@ -163,7 +163,19 @@ commander-ide > .commander-tabs-header a {
 }
 
 commander-ide > .commander-tabs-header a:hover                { background-color: #111;    }
-commander-ide > .commander-tabs-header .commander-tabs-active { background-color: #4CAF50; }
+commander-ide > .commander-tabs-header .commander-tabs-active { background-color: #F04646; }
+
+commander-editor { margin-bottom: 1em; }
+
+commander-editor a { padding: .5em; }
+
+.fa-times-circle { padding-top: .5em !important; }
+.fa-times-circle:hover { cursor: pointer; }
+
+.editortabs { 
+    margin-left:           -.1em;
+    margin-top:            .1em;
+}
 
 nav.editortabs ul {
     list-style-type:       none;
@@ -187,8 +199,11 @@ nav.editortabs a {
     padding-right:         10px;
 }
 
-nav.editortabs commander-editor:hover  { background-color: #111;    }
-nav.editortabs commander-editor.active { background-color: #4CAF50; }
+nav.editortabs commander-editor:not([class="active"]) { background-color: #494949; }
+nav.editortabs commander-editor:hover  { background-color: #A02E2E; }
+nav.editortabs commander-editor.active { background-color: #F04646; }
+
+commander-files { margin: 1.5em 1em 0 1em; }
 
 commander-files .fa-ul { margin-left: 1.5em; }
 
