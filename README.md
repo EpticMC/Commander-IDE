@@ -1,7 +1,7 @@
 # Commander IDE
 A fully featured Command Block IDE
 
-Nothing to see here yet.
+**Note:** This is still in development. It doesn't do much yet.
 
 For now there is **no** deployment version. <br>
 If you still want to build and execute the programm, follow these steps:
