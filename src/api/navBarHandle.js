@@ -20,9 +20,12 @@ $(document).ready(function() {
 		$(".selected").removeClass("selected");
 		$(this).addClass("selected");
 	});
-	$("body:not(.nav-bar ul.left li), body:not(.nav-bar li input#search)").click(function() {
-		$(".selected").removeClass("selected");
-		$(".visible").removeClass("visible");
+	$("html").click(function() {
+		if ($(this).attr("id") == "v__zoom" || $(this).attr("class") == "zoomer") return;
+		else {
+			$(".selected").removeClass("selected");
+			$(".visible").removeClass("visible");
+		}
 	});
 
 
@@ -85,12 +88,19 @@ $(document).ready(function() {
 	});
 	$("#v__reload").click(function() { win.reload(); });
 	$("#v__dev").click(function() { remote.getCurrentWindow().toggleDevTools(); });
-	$("#v__zoom_in").click(function() { 
-		var _this = webFrame.getZoomFactor();
-		/*if (_this >= 3)*/ webFrame.setZoomFactor(_this + .1);
+	$(".zoomer").on("change", function() {
+		var val = $(this).val();
+		var rnd = (Math.round(val / 10) * 10);
+		$(this).val(rnd);
+		var newrnd = rnd + 50;
+		$(".zoom_val").text("Zoom: " + newrnd + "%");
+		var _zoom = newrnd / 100;
+		webFrame.setZoomFactor(_zoom);
 	});
-	$("#v__zoom_out").click(function() { 
-
+	$("#v__reset_zoom").click(function() { 
+		$(".zoom_val").text("Zoom: 100%");
+		webFrame.setZoomFactor(1);
+		$(".zoomer").val(50);
 	});
 	$("#v__fullscreen").click(function() { 
 		if (win.isFullScreen()) win.setFullScreen(false);

@@ -4,14 +4,14 @@
  * GLOBALS *
  * * * * * */
 
-*{
+* {
     font-family:           'Raleway', sans-serif;
     padding:               0px;
     margin:                0px;
     overflow:              visible;
 }
 
-button{
+button {
     padding:               5px;
     border-radius:         5px;
 }
@@ -216,7 +216,53 @@ commander-files .fa-li.folder { color: #DD0;  }
 commander-files .fa-li.file   { color: white; }
 
 commander-files a {
-    text-decoration: none;
-    color: white;
+    text-decoration:       none;
+    color:                 white;
 }
 
+#v__zoom {
+    text-align:            center;
+    padding:               0;
+}
+
+.zoom_val { 
+    text-align:            center; 
+    margin-top:            .5em;
+}
+
+.zoomer {
+    text-align:            center;
+    outline:               none;
+    appearance:            none !important;
+    -webkit-appearance:    none !important;
+    -moz-appearance:       none !important;
+    height:                18px;
+    width:                 80%;
+    margin:                .5em 0 .5em 0; 
+    background:            linear-gradient(#fddd3b, #f19104);
+}
+
+.zoomer::-webkit-slider-thumb{
+    appearance:            none !important;
+    height:                34px;
+    width:                 34px; 
+    border-top:            1px solid #FFF;
+    border-bottom:         1px solid #a5a6b1;
+    border-radius:         50%;
+    background:            #F0F0F2;
+    background:            linear-gradient(#f0f0f2, #c2c3cb);
+    box-shadow:            0 5px 8px rgba(0,0,0,.2);
+}
+
+.zoomer::before {
+    position:              absolute;
+    left:                  -12%;
+    content:               '+'; 
+    color:                 #CCC;
+}
+
+.zoomer::after {  
+    position:              absolute;
+    right:                 -12%;
+    content:               '-';
+}
