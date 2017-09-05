@@ -16,13 +16,14 @@ button{
     border-radius:         5px;
 }
 
-body { 
+html, body { 
     background-color:      #1E1E1E;
     margin:                0;
     overflow:              hidden;
     padding:               0;
     perspective-origin:    0 0;
-
+    width:                 100%;
+    height:                100%;
 }
 
 /* * * *
@@ -134,21 +135,73 @@ body {
   color:                   #FFF;
 }
 
-/* * * * * *
- * EDITORS *
- * * * * * */
+/* * * * *
+ * MAINS *
+ * * * * */
 
-#container {
-    height:                87vh;
-    width:                 95vw;
-    padding-top:           2.5em;
-    z-index:               1;
+commander-setting {
+    color:                 white;
+    padding:               10px;
 }
 
-.monaco-editor {
-    margin-left:           10px;
-    height:                100%;
-    width:                 100%;
-    z-index:               10;
+commander-ide > .commander-tabs-header {
+    background-color:      #333;
+    list-style-type:       none;
+    margin:                0;
+    padding:               0;
+    overflow: hidden;
+}
+
+commander-ide > .commander-tabs-header commander-tabs { float: left; }
+
+commander-ide > .commander-tabs-header a {
+    display:               block;
+    color:                 white;
+    text-align:            center;
+    text-decoration:       none;
+    padding:               14px 16px;
+}
+
+commander-ide > .commander-tabs-header a:hover                { background-color: #111;    }
+commander-ide > .commander-tabs-header .commander-tabs-active { background-color: #4CAF50; }
+
+nav.editortabs ul {
+    list-style-type:       none;
+    margin:                0;
+    padding:               0;
+    overflow:              hidden;
+}
+
+nav.editortabs commander-editor {
+    float:                 left;
+    color:                 white;
+    padding:               0px 10px;
+}
+
+nav.editortabs a {
+    color:                 white;
+    display:               block;
+    float:                 left;
+    text-align:            center;
+    text-decoration:       none;
+    padding-right:         10px;
+}
+
+nav.editortabs commander-editor:hover  { background-color: #111;    }
+nav.editortabs commander-editor.active { background-color: #4CAF50; }
+
+commander-files .fa-ul { margin-left: 1.5em; }
+
+commander-files .fa-li {
+    left:                  -1.5em;
+    width:                 1.5em;
+}
+
+commander-files .fa-li.folder { color: #DD0;  }
+commander-files .fa-li.file   { color: white; }
+
+commander-files a {
+    text-decoration: none;
+    color: white;
 }
 
