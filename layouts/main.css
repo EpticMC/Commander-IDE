@@ -4,6 +4,9 @@
  * GLOBALS *
  * * * * * */
 
+::-webkit-scrollbar-track { background: #111;    }
+::-webkit-scrollbar-thumb { background: #F04646; }
+
 * {
     font-family:           'Raleway', sans-serif;
     padding:               0px;
@@ -131,7 +134,7 @@ html, body {
 }
 
 .submenu li:hover {
-  background:              -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5978f5), color-stop(100%, #335ef6));
+  background:              -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5978F5), color-stop(100%, #335EF6));
   color:                   #FFF;
 }
 
@@ -162,8 +165,9 @@ commander-ide > .commander-tabs-header a {
     padding:               14px 16px;
 }
 
-commander-ide > .commander-tabs-header a:hover                { background-color: #111;    }
-commander-ide > .commander-tabs-header .commander-tabs-active { background-color: #F04646; }
+commander-ide > .commander-tabs-header a:hover                        { background-color: #8E2929; }
+commander-ide > .commander-tabs-header .commander-tabs-active a:hover { background-color: #F04646; }
+commander-ide > .commander-tabs-header .commander-tabs-active         { background-color: #F04646; }
 
 commander-editor { margin-bottom: 1em; }
 
@@ -203,7 +207,10 @@ nav.editortabs commander-editor:not([class="active"]) { background-color: #49494
 nav.editortabs commander-editor:hover  { background-color: #A02E2E; }
 nav.editortabs commander-editor.active { background-color: #F04646; }
 
-commander-files { margin: 1.5em 1em 0 1em; }
+commander-files { 
+    padding:               1.5em 1em 0 1em;
+    background:            #4c4c4c; 
+}
 
 commander-files .fa-ul { margin-left: 1.5em; }
 
@@ -249,11 +256,11 @@ commander-files a {
     height:                34px;
     width:                 34px; 
     border-top:            1px solid #FFF;
-    border-bottom:         1px solid #a5a6b1;
+    border-bottom:         1px solid #A5A6B1;
     border-radius:         50%;
     background:            #F0F0F2;
-    background:            linear-gradient(#f0f0f2, #c2c3cb);
-    box-shadow:            0 5px 8px rgba(0,0,0,.2);
+    background:            linear-gradient(#F0F0F2, #C2C3CB);
+    box-shadow:            0 5px 8px rgba(0, 0, 0, .2);
 }
 
 .zoomer::before {

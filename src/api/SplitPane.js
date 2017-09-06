@@ -33,9 +33,6 @@ class Splitter extends HTMLElement {
         this.style.width       = '0';
         this.style.padding     = '1px';
         this.style.background  = '#ccc';
-        this.style.borderLeft  = '3px';
-        this.style.borderRight = '3px';
-        this.style.borderStyle = 'solid';
         this.style.cursor      = 'col-resize';
         if (this.nextElementSibling) this.nextElementSibling.style.flex = 'auto';
         this.addEventListener('mousedown', this.startDragging);
