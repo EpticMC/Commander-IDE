@@ -6,4 +6,6 @@ const fs = require("fs");
 window.onload = () => {
     var win = remote.getCurrentWindow();
     win.setResizable(true);
+    win.setMinimumSize(800, 400);
+    win.setTitle(win.getTitle() + " - Main");
 }
