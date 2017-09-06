@@ -142,7 +142,7 @@ html, body {
  * MAINS *
  * * * * */
 
-commander-setting {
+commander-setting, commander-projects {
     color:                 white;
     padding:               10px;
 }
