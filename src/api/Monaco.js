@@ -50,7 +50,7 @@ class MonacoEditor extends Editor_1.Editor {
                 break;
             }
             //case '.cobl': {
-            default {
+            default: {
                 language = 'commandblock';
                 break;
             }
