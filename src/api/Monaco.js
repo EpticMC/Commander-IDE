@@ -49,6 +49,11 @@ class MonacoEditor extends Editor_1.Editor {
                 language = 'markdown';
                 break;
             }
+            //case '.cobl': {
+            default {
+                language = 'commandblock';
+                break;
+            }
         }
         this.editor = monaco.editor.create(this, {
             value: contents,
