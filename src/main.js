@@ -5,7 +5,12 @@ const fs = require("fs");
 
 window.onload = () => {
     var win = remote.getCurrentWindow();
+    let currentWindow = remote.getCurrentWindow().removeAllListeners();
     win.setResizable(true);
     win.setMinimumSize(800, 400);
     win.setTitle(win.getTitle() + " - Main");
+
+    currentWindow.on('resize', function () {
+		//Width bugfix
+    });
 }
