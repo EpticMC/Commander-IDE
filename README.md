@@ -11,10 +11,10 @@ If you still want to build and execute the programm, follow these steps:
 $ `node -v` <br>
 If this returns a version number, NodeJS is installed. **If not**, get NodeJS <a href="https://nodejs.org/en/download/package-manager/">here</a>. <br><br>
 2. Make sure electron is installed <br>
-$ `electron -v`
+$ `electron -v` <br>
 If this returns a version number, Electron is installed. **If not**, get it by typing <br>
 $ `sudo npm install -g electron` <br><br>
-3. Clone the repository and navigate to it. You can either download it from GitHub or if you have Git installed, type <br>
+3. Clone the repository and navigate to it. You can either download it <a href="https://github.com/EpticMC/Commander-IDE/archive/master.zip">here</a> or if you have Git installed, type <br>
 $ `git clone https://github.com/EpticMC/Commander-IDE.git && cd Commander-IDE` <br><br>
 4. Install all dependencies <br>
 $ `npm install` <br><br>
