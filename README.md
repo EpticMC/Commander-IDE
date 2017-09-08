@@ -1,4 +1,7 @@
 # Commander IDE
+
+[![Code Climate](https://img.shields.io/github/issues/EpticMC/Commander-IDE.svg)](https://github.com/EpticMC/Commander-IDE/issues)
+
 A fully featured Command Block IDE
 
 **Note:** This is still in development. It doesn't do much yet.
