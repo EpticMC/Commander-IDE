@@ -1,6 +1,6 @@
 # Commander IDE
 
-[![Code Climate](https://img.shields.io/github/issues/EpticMC/Commander-IDE.svg)](https://github.com/EpticMC/Commander-IDE/issues)
+[![Github Issues](https://img.shields.io/github/issues/EpticMC/Commander-IDE.svg)](https://github.com/EpticMC/Commander-IDE/issues) [![GitHub closed issues](https://img.shields.io/github/issues-closed/EpticMC/Commander-IDE.svg)](https://github.com/EpticMC/Commander-IDE/issues)
 
 A fully featured Command Block IDE
 
