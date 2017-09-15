@@ -2,7 +2,13 @@
 
 [![Github Issues](https://img.shields.io/github/issues/EpticMC/Commander-IDE.svg)](https://github.com/EpticMC/Commander-IDE/issues) [![GitHub closed issues](https://img.shields.io/github/issues-closed/EpticMC/Commander-IDE.svg)](https://github.com/EpticMC/Commander-IDE/issues)
 
+<p align="center">
+<img src="https://raw.githubusercontent.com/EpticMC/Commander-IDE/master/icon/icon.png" />
+<br>
 A fully featured Command Block IDE
+</p>
+
+<br>
 
 **Note:** This is still in development. It doesn't do much yet.
 
