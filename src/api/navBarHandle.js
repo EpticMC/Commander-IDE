@@ -35,6 +35,12 @@ function open(url){
 	);
 }
 
+function toggleFullScreen(){
+	var win = remote.getCurrentWindow();
+	if (win.isFullScreen()) win.setFullScreen(false);
+	else win.setFullScreen(true);
+}
+
 $(document).ready(function() {
 	var win = remote.getCurrentWindow();
 	$(".nav-bar ul li").click(function(e) {
@@ -59,6 +65,11 @@ $(document).ready(function() {
         	case 116: {
         		e.preventDefault();
         		win.reload();
+        		break;
+        	}
+        	case 122: {
+        		e.preventDefault();
+        		toggleFullScreen();
         		break;
         	}
         	default: noop();
@@ -142,10 +153,7 @@ $(document).ready(function() {
 		webFrame.setZoomFactor(1);
 		$(".zoomer").val(50);
 	});
-	$("#v__fullscreen").click(function() { 
-		if (win.isFullScreen()) win.setFullScreen(false);
-		else win.setFullScreen(true);
-	});
+	$("#v__fullscreen").click(function() { toggleFullScreen(); });
 
 	//Help
 	$("#h__about").click(function(){ 
