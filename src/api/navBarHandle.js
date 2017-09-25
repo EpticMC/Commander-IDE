@@ -73,21 +73,20 @@ $(document).ready(function() {
 
 	//Keys
 	$("body").keydown(function(e){
-        var keyCode = e.keyCode || e.which;
-        switch (keyCode){
-        	case 116: {
-        		e.preventDefault();
-        		win.reload();
-        		break;
-        	}
-        	case 122: {
-        		e.preventDefault();
-        		toggleFullScreen();
-        		break;
-        	}
-        	default: noop();
-        }       
-    });
+		var keyCode = e.keyCode || e.which;
+		switch (keyCode){
+			case 116: {
+				e.preventDefault();
+				win.reload();
+				break;
+			}
+			case 122: {
+				e.preventDefault();
+				toggleFullScreen();
+				break;
+			}
+		}       
+	});
 
 	$(".nlmodal-close").click(function(e) { forceModalClose(); });
 	window.onclick = function(event) { if (event.target == document.getElementById("nlmodal")) forceModalClose(); }
