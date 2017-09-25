@@ -109,6 +109,7 @@ $(document).ready(function() {
 		if (win.isFullScreen()) win.setFullScreen(false);
 		if (win.isMaximized()) win.unmaximize();
     	win.setSize(1000, 600, true);
+    	win.center();
 	});
 	$("#v__reload").click(function() { win.reload(); });
 	$("#v__dev").click(function() { remote.getCurrentWindow().toggleDevTools(); });
