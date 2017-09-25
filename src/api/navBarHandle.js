@@ -13,11 +13,21 @@ var _con = "https://nulldev.org/contact";
 var _git = "https://github.com/EpticMC/Commander-IDE";
 var _ept = "https://epticmc.com";
 
+function isset(_var) { return ((_var && _var != null && _var != "" ) ? true : false); }
+
 function modal(msg, headeroff, footeroff){
 	if (headeroff) $(".nlmodal-header").css("display", "none");
 	if (footeroff) $(".nlmodal-footer").css("display", "none");
 	$(".nlmodal").css("display", "block");
 	$("#nlmodal-text").html(msg);
+}
+
+function msg(msg){
+	$("#nlmsg-text").html(msg);
+	$(".nlmsg").addClass('nlmsg-show');
+    setTimeout(function(){ 
+    	$(".nlmsg").removeClass('nlmsg-show');
+    }, 3000);
 }
 
 function forceModalClose(){ 
@@ -81,7 +91,7 @@ $(document).ready(function() {
 
 	//File
 	$("#f__new").click(function() {
-
+		
 	});
 	$("#f__open").click(function() {
 

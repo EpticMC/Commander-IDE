@@ -142,6 +142,28 @@ html, body {
  * MAINS *
  * * * * */
 
+.nlmsg {
+    visibility:            hidden;
+    min-width:             250px;
+    margin-left:           -125px;
+    background-color:      #333;
+    color:                 #FFF;
+    text-align:            center;
+    border-radius:         2px;
+    padding:               16px;
+    position:              fixed;
+    z-index:               1;
+    left:                  50%;
+    bottom:                30px;
+    font-size:             17px;
+}
+
+.nlmsg-show {
+    visibility:            visible;
+    -webkit-animation:     nlmsg-fadein 0.5s, nlmsg-fadeout 0.5s 2.5s;
+    animation:             nlmsg-fadein 0.5s, nlmsg-fadeout 0.5s 2.5s;
+}
+
 .nlmodal {
     display:               none;
     position:              fixed;
@@ -375,5 +397,49 @@ commander-files a {
     to {
         top:               0; 
         opacity:           1;
+    }
+}
+
+@-webkit-keyframes nlmsg-fadein {
+    from {
+        bottom:            0; 
+        opacity:           0;
+    } 
+    to {
+        bottom:            30px; 
+        opacity:           1;
+    }
+}
+
+@keyframes nlmsg-fadein {
+    from {
+        bottom:            0; 
+        opacity:           0;
+    }
+    to {
+        bottom:            30px; 
+        opacity:           1;
+    }
+}
+
+@-webkit-keyframes nlmsg-fadeout {
+    from {
+        bottom:            30px; 
+        opacity:           1;
+    } 
+    to {
+        bottom:            0; 
+        opacity:           0;
+    }
+}
+
+@keyframes nlmsg-fadeout {
+    from {
+        bottom:            30px; 
+        opacity:           1;
+    }
+    to {
+        bottom:            0; 
+        opacity:           0;
     }
 }
