@@ -11,9 +11,22 @@ var _con = "https://nulldev.org/contact";
 var _git = "https://github.com/EpticMC/Commander-IDE";
 var _ept = "https://epticmc.com";
 
-function modal(msg){
+function modal(msg, headeroff, footeroff){
+	if (headeroff) $(".nlmodal-header").css("display", "none");
+	if (footeroff) $(".nlmodal-footer").css("display", "none");
 	$(".nlmodal").css("display", "block");
-	$("#nlmodal-text").text(msg);
+	$("#nlmodal-text").html(msg);
+}
+
+function forceModalClose(){ 
+	$(".nlmodal").css("display", "none"); 
+	$(".nlmodal-header").css("display", "block");
+	$(".nlmodal-footer").css("display", "block");
+}
+
+function open(url){
+	shell.openExternal(url);
+	modal("Opening link in browser...<br><br>Note: This may take a while depending on your standard browser.");
 }
 
 $(document).ready(function() {
@@ -33,8 +46,8 @@ $(document).ready(function() {
 		}
 	});
 
-	$(".nlmodal-close").click(function(e) { $(".nlmodal").css("display", "none"); });
-	window.onclick = function(event) { if (event.target == document.getElementById("nlmodal")) $(".nlmodal").css("display", "none"); }
+	$(".nlmodal-close").click(function(e) { forceModalClose(); });
+	window.onclick = function(event) { if (event.target == document.getElementById("nlmodal")) forceModalClose(); }
 
 	//File
 	$("#f__new").click(function() {
@@ -116,10 +129,10 @@ $(document).ready(function() {
 
 	//Help
 	$("#h__about").click(function(){ 
-		modal("test");
+		modal("test", false, true);
 	});
-	$("#h__bug").click(function()     { shell.openExternal(_bug); });
-	$("#h__contact").click(function() { shell.openExternal(_con); });
-	$("#h__code").click(function()    { shell.openExternal(_git); });
-	$("#h__eptic").click(function()   { shell.openExternal(_ept); });
+	$("#h__bug").click(function()     { open(_bug); });
+	$("#h__contact").click(function() { open(_con); });
+	$("#h__code").click(function()    { open(_git); });
+	$("#h__eptic").click(function()   { open(_ept); });
 });
