@@ -57,11 +57,14 @@ function toggleFullScreen(){
 $(document).ready(function() {
 	var win = remote.getCurrentWindow();
 	$(".nav-bar ul li").click(function(e) {
-		e.stopPropagation();
-		$(".visible").removeClass("visible");
-		$(this).children(" div.submenu").addClass("visible").fadeIn();
-		$(".selected").removeClass("selected");
-		$(this).addClass("selected");
+		if ($(this).hasClass("selected")) noop();
+		else {
+			e.stopPropagation();
+			$(".visible").removeClass("visible");
+			$(".selected").removeClass("selected");
+			$(this).children("div.submenu").addClass("visible").fadeIn();
+			$(this).addClass("selected");
+		}
 	});
 	$("html").click(function() {
 		if ($(this).attr("id") == "v__zoom" || $(this).attr("class") == "zoomer") return;
