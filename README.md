@@ -10,6 +10,10 @@ A fully featured Command Block IDE
 
 <br>
 
+Commander IDE is an **I**ntegrated **D**evelopment **E**nvironment to Code CommandBlock programms.
+
+<br>
+
 **Note:** This is still in development. It doesn't do much yet.
 
 For now there is **no** deployment version. <br>
