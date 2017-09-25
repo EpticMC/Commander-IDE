@@ -5,6 +5,8 @@ const remote = require("electron").remote;
 const shell = require('electron').shell;
 const {webFrame} = require('electron')
 
+const noop = () => {};
+
 //Links
 var _bug = "https://github.com/EpticMC/Commander-IDE/issues";
 var _con = "https://nulldev.org/contact";
@@ -49,6 +51,19 @@ $(document).ready(function() {
 			$(".visible").removeClass("visible");
 		}
 	});
+
+	//Keys
+	$("body").keydown(function(e){
+        var keyCode = e.keyCode || e.which;
+        switch (keyCode){
+        	case 116: {
+        		e.preventDefault();
+        		win.reload();
+        		break;
+        	}
+        	default: noop();
+        }       
+    });
 
 	$(".nlmodal-close").click(function(e) { forceModalClose(); });
 	window.onclick = function(event) { if (event.target == document.getElementById("nlmodal")) forceModalClose(); }
