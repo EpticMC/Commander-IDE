@@ -201,6 +201,8 @@ nav.editortabs commander-editor {
     padding:               0px 10px;
 }
 
+nav.editortabs ul:first-child { margin-left: 2px; }
+
 nav.editortabs a {
     color:                 white;
     display:               block;
