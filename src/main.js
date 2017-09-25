@@ -1,6 +1,7 @@
 const { ipcRenderer } = require("electron");
 const remote = require("electron").remote;
 const { app, BrowserWindow }  = require("electron");
+window.$ = window.jQuery = require("jquery");
 const fs = require("fs");
 
 window.onload = () => {

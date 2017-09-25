@@ -134,13 +134,80 @@ html, body {
 }
 
 .submenu li:hover {
-  background:              -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5978F5), color-stop(100%, #335EF6));
-  color:                   #FFF;
+    background:            -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5978F5), color-stop(100%, #335EF6));
+    color:                 #FFF;
 }
 
 /* * * * *
  * MAINS *
  * * * * */
+
+.nlmodal {
+    display:               none;
+    position:              fixed;
+    z-index:               1;
+    padding-top:           100px;
+    left:                  0;
+    top:                   0;
+    width:                 100%;
+    height:                100%;
+    overflow:              auto;
+    background-color:      rgb(0, 0, 0);
+    background-color:      rgba(0, 0, 0, 0.7);
+}
+
+.nlmodal-content {
+    position:              relative;
+    background-color:      #F7F7F7;
+    margin:                auto;
+    padding:               0;
+    border:                1px solid #888;
+    width:                 80%;
+    box-shadow:            0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: nlmodal-anim;
+    -webkit-animation-duration: 0.4s;
+    animation-name:        nlmodal-anim;
+    animation-duration:    0.4s;
+}
+
+.nlmodal-header {
+    padding:               2px 16px;
+    background-color:      #F04646;
+    color:                 #FFF;
+}
+
+.nlmodal-header h2 { line-height: 50px !important; }
+
+.nlmodal-header h2 span {
+    color:                 #FFF;
+    font-size:             .8em;
+}
+
+.nlmodal-body   { padding: 2px 16px; }
+.nlmodal-body p { color:   #000;     }
+
+.nlmodal-footer {
+    padding:               2px 16px;
+    background-color:      #F04646;
+    color:                 white;
+    text-align:            right;
+}
+
+.nlmodal-footer h3 { line-height: 50px !important; }
+
+.nlmodal-close {
+    color:                 black;
+    float:                 right;
+    font-size:             28px;
+    font-weight:           bold;
+}
+
+.nlmodal-close:hover,
+.nlmodal-close:focus {
+    color:                 white;
+    text-decoration:       none;
+    cursor:                pointer;
+}
 
 monaco-editor * { 
     font-family:           "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback" !important;
@@ -283,4 +350,30 @@ commander-files a {
     position:              absolute;
     right:                 -12%;
     content:               '-';
+}
+
+/* * * * *
+ * ANIMS *
+ * * * * */
+
+@-webkit-keyframes nlmodal-anim {
+    from { 
+        top:               -300px; 
+        opacity:           0;
+    } 
+    to { 
+        top:               0; 
+        opacity:           1;
+    }
+}
+
+@keyframes nlmodal-anim {
+    from { 
+        top:               -300px; 
+        opacity:           0;
+    }
+    to {
+        top:               0; 
+        opacity:           1;
+    }
 }
