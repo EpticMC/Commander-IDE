@@ -48,7 +48,10 @@ function open(url){
 function toggleFullScreen(){
 	var win = remote.getCurrentWindow();
 	if (win.isFullScreen()) win.setFullScreen(false);
-	else win.setFullScreen(true);
+	else {
+		win.setFullScreen(true);
+		msg("Use F11 to exit fullscreen again.");
+	}
 }
 
 $(document).ready(function() {
