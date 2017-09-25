@@ -26,7 +26,11 @@ function forceModalClose(){
 
 function open(url){
 	shell.openExternal(url);
-	modal("Opening link in browser...<br><br>Note: This may take a while depending on your standard browser.");
+	modal(
+		"Opening link in browser..." +
+		"<br><br>" +
+		"Note: This may take a while depending on your standard browser."
+	);
 }
 
 $(document).ready(function() {
@@ -129,7 +133,23 @@ $(document).ready(function() {
 
 	//Help
 	$("#h__about").click(function(){ 
-		modal("test", false, true);
+		var _d = new Date();
+		var _n = _d.getFullYear();
+		modal(
+			"<div style=\"text-align: center;\"><b>Commander IDE</b></div>" +
+			"<br><br>" +
+			"<img style=\"display: block; margin: auto;\" text-align=\"center\" width=\"auto\" height=\"100px\" src=\"../icon/icon.png\">" +
+			"<br><br>" +
+			"Commander IDE is an <b>I</b>ntegrated <b>D</b>evelopment <b>E</b>nvironment to \"Code\" CommandBlock programms." +
+			"<br><br>" +
+			"Developed by NullDev for the EpticMC Project." +
+			"<br><br>" +
+			"<img style=\"display: block; margin: auto;\" text-align=\"center\" width=\"auto\" height=\"100px\" src=\"../icon/nl.png\">" +
+			"<br><br>" +
+			"<div style=\"text-align: center;\">Copyright (c) " + _n + " NullDev</div>", 
+			false, 
+			true
+		);
 	});
 	$("#h__bug").click(function()     { open(_bug); });
 	$("#h__contact").click(function() { open(_con); });
